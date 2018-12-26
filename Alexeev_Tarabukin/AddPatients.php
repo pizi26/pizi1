@@ -15,9 +15,9 @@ echo $LastName;
 echo $FathersName;
 echo $PassportSeries;
 echo $PassportNumber;
-echo $Adress
+echo $Adress;
 
-/*$SQLquery = "INSERT INTO Patients VALUES ((SELECT IFNULL(max(id)+1,1) from (Select id from Patients) as idPatients), '$FirstName','$LastName', '$FathersName','$PassportSeries', '$PassportNumber', '$Adress')";
+$SQLquery = "INSERT INTO Patients VALUES ((SELECT IFNULL(max(id)+1,1) from (Select id from Patients) as idPatients), '$FirstName','$LastName', '$FathersName','$PassportSeries', '$PassportNumber', '$Adress')";
 echo '<BR> SQL query: ';
 echo $SQLquery;
 
@@ -28,6 +28,5 @@ if (mysqli_query($link, $SQLquery)) {
 }
 
 mysqli_close($link);
-*/
 printf('<a href="index.html"> <P>GO BACK</P> </a>');
 ?>
