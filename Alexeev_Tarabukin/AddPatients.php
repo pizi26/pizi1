@@ -17,7 +17,7 @@ echo $PassportSeries;
 echo $PassportNumber;
 echo $Adress;
 
-$SQLquery = "INSERT INTO Patients VALUES ((SELECT IFNULL(max(id)+1,1) from (Select id from Patients) as idPatients), '$FirstName','$LastName', '$FathersName','$PassportSeries', '$PassportNumber', '$Adress')";
+$SQLquery = "INSERT INTO Patients VALUES ((SELECT IFNULL(max(idPatients)+1,1) from (Select id from Patients) as idPatients), '$FirstName','$LastName', '$FathersName','$PassportSeries', '$PassportNumber', '$Adress')";
 echo '<BR> SQL query: ';
 echo $SQLquery;
 
