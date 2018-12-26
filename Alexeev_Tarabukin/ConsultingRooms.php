@@ -15,7 +15,7 @@
 	$SQLresult = mysqli_query($link,$SQLquery);
 	while ($result = mysqli_fetch_array($SQLresult,MYSQLI_NUM))
 	{
-		printf('<P>Consulting Rooms %d:  Номер кабинета: %d с %t до %t </P>',$result[0],$result[1],$result[2],$result[3]);
+		printf('<P>Consulting Rooms %d:  Номер кабинета: %d с %s до %s </P>',$result[0],$result[1],$result[2],$result[3]);
 	}
 	mysqli_free_result($SQLresult);
 	mysqli_close($link);
