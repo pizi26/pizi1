@@ -5,7 +5,7 @@
  </head>
  <body>
 	<?php
-	printf('<P>Those our sepcializations:</P>');
+	printf('<P>Those our specializations:</P>');
 	include('config.php');	
 	$link = mysqli_connect($server, $user, $password, $database)
 	    or die('Error: Unable to connect: ' . mysqli_connect_error());
