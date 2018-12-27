@@ -66,7 +66,19 @@ CREATE TABLE IF NOT EXISTS `AlekseevStanislavDB`.`Specialists` (
 CREATE TABLE IF NOT EXISTS `AlekseevStanislavDB`.`PatientsCard` (
   `idPatientsSP` int REFERENCES `AlekseevStanislavDB`.`Patients` (`idPatients`)
     ON DELETE NO ACTION
-    ON UPDATE NO ACTION);
+    ON UPDATE NO ACTION,
+  `First NameSP` VARCHAR(45) REFERENCES `AlekseevStanislavDB`.`Patients` (`First Name`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  `Last NameSP` VARCHAR(45) REFERENCES `AlekseevStanislavDB`.`Patients` (`Last Name`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  `Fathers NameSP` VARCHAR(45) REFERENCES `AlekseevStanislavDB`.`Patients` (`Fathers Name`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+   `idsessionsSP` int REFERENCES `AlekseevStanislavDB`.`sessions` (`idsessions`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,);
 
 CREATE TABLE IF NOT EXISTS `AlekseevStanislavDB`.`diagnosis` (
   `iddiagnosis` INT NOT NULL,
@@ -75,7 +87,9 @@ CREATE TABLE IF NOT EXISTS `AlekseevStanislavDB`.`diagnosis` (
 
 CREATE TABLE IF NOT EXISTS `AlekseevStanislavDB`.`sessions` (
   `idsessions` INT NOT NULL,
-  `Specialists_idSpecialists` INT NOT NULL,
+  `Specialists_idSpecialists` INT REFERENCES `AlekseevStanislavDB`.`Specialists` (`idSpecialist`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
   `timeStart` TIME NULL DEFAULT NULL,
   `timeFinish` TIME NULL DEFAULT NULL,
   `lechenie` VARCHAR(45) NULL DEFAULT NULL,
