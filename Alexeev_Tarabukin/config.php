@@ -1,6 +1,6 @@
 <?php
 $server = '52.14.19.253';
-$user='Stas';
-$password='mozzik98';
+$user='root';
+$password='';
 $database='AlekseevStanislavDB';
 ?>
