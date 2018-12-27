@@ -5,7 +5,7 @@
  </head>
  <body>
 	<?php
-	printf('<P>Those our specializations:</P>');
+	printf('<P>Тут хранится информация о специальностях, можно сказать список вакансий для сотрудников больницы: </P>');
 	include('config.php');	
 	$link = mysqli_connect($server, $user, $password, $database)
 	    or die('Error: Unable to connect: ' . mysqli_connect_error());
@@ -15,7 +15,7 @@
 	$SQLresult = mysqli_query($link,$SQLquery);
 	while ($result = mysqli_fetch_array($SQLresult,MYSQLI_NUM))
 	{
-		printf('<P>User:  %s(%d) </P>',$result[1],$result[0]);
+		printf('<P>Специальность %d: %s </P>',$result[0],$result[1]);
 	}
 	mysqli_free_result($SQLresult);
 	mysqli_close($link);

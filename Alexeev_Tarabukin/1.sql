@@ -20,22 +20,14 @@ SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,N
 CREATE SCHEMA IF NOT EXISTS `AlekseevStanislavDB` DEFAULT CHARACTER SET utf8 ;
 USE `AlekseevStanislavDB` ;
 
--- -----------------------------------------------------
--- Table `AlekseevStanislavDB`.`Workers`
--- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `AlekseevStanislavDB`.`Workers` (
   `Passport` INT NOT NULL,
   `First Name` VARCHAR(45) NULL DEFAULT NULL,
   `Last Name` VARCHAR(45) NULL DEFAULT NULL,
   `Fathers Name` VARCHAR(45) NULL DEFAULT NULL,
   `Science degree` VARCHAR(45) NULL DEFAULT NULL,
-  PRIMARY KEY (`Passport`))
-ENGINE = InnoDB;
+  PRIMARY KEY (`Passport`));
 
-
--- -----------------------------------------------------
--- Table `AlekseevStanislavDB`.`Patients`
--- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `AlekseevStanislavDB`.`Patients` (
   `idPatients` INT NOT NULL,
   `First Name` VARCHAR(45) NULL DEFAULT NULL,
@@ -44,35 +36,20 @@ CREATE TABLE IF NOT EXISTS `AlekseevStanislavDB`.`Patients` (
   `Passport Series` INT NULL DEFAULT NULL,
   `Passport Number` INT NULL DEFAULT NULL,
   `Adress` VARCHAR(45) NULL DEFAULT NULL,
-  PRIMARY KEY (`idPatients`))
-ENGINE = InnoDB;
+  PRIMARY KEY (`idPatients`));
 
-
--- -----------------------------------------------------
--- Table `AlekseevStanislavDB`.`Specialisations`
--- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `AlekseevStanislavDB`.`Specialisations` (
   `idSpecializations` INT NOT NULL,
   `SpName` VARCHAR(45) NULL DEFAULT NULL,
-  PRIMARY KEY (`idSpecializations`))
-ENGINE = InnoDB;
+  PRIMARY KEY (`idSpecializations`));
 
-
--- -----------------------------------------------------
--- Table `AlekseevStanislavDB`.`ConsultingRooms`
--- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `AlekseevStanislavDB`.`ConsultingRooms` (
   `idCab` INT NOT NULL,
   `NUMcab` INT NULL DEFAULT NULL,
   `StartWork` TIME NULL DEFAULT NULL,
   `EndWork` TIME NULL DEFAULT NULL,
-  PRIMARY KEY (`idCab`))
-ENGINE = InnoDB;
+  PRIMARY KEY (`idCab`));
 
-
--- -----------------------------------------------------
--- Table `AlekseevStanislavDB`.`Specialists`
--- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `AlekseevStanislavDB`.`Specialists` (
   `idSpecialist` INT NOT NULL,
   PRIMARY KEY (`idSpecialist`),
@@ -86,37 +63,16 @@ CREATE TABLE IF NOT EXISTS `AlekseevStanislavDB`.`Specialists` (
     ON DELETE NO ACTION
     ON UPDATE NO ACTION);
 
-
--- -----------------------------------------------------
--- Table `AlekseevStanislavDB`.`PatientsCard`
--- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `AlekseevStanislavDB`.`PatientsCard` (
   `idPatientsSP` int REFERENCES `AlekseevStanislavDB`.`Patients` (`idPatients`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION);
 
--- -----------------------------------------------------
--- Table `AlekseevStanislavDB`.`SEANSI`
--- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `AlekseevStanislavDB`.`SEANSI` (
-  `Specialists_idSpecialist` int REFERENCES `AlekseevStanislavDB`.`Specialists` (`idSpecialist`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION);
-
-
--- -----------------------------------------------------
--- Table `AlekseevStanislavDB`.`diagnosis`
--- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `AlekseevStanislavDB`.`diagnosis` (
   `iddiagnosis` INT NOT NULL,
   `nameDia` VARCHAR(45) NULL DEFAULT NULL,
-  PRIMARY KEY (`iddiagnosis`))
-ENGINE = InnoDB;
+  PRIMARY KEY (`iddiagnosis`));
 
-
--- -----------------------------------------------------
--- Table `AlekseevStanislavDB`.`sessions`
--- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `AlekseevStanislavDB`.`sessions` (
   `idsessions` INT NOT NULL,
   `Specialists_idSpecialists` INT NOT NULL,
@@ -131,10 +87,6 @@ CREATE TABLE IF NOT EXISTS `AlekseevStanislavDB`.`sessions` (
     ON DELETE NO ACTION
     ON UPDATE NO ACTION);
 
-
--- -----------------------------------------------------
--- Table `AlekseevStanislavDB`.`PatientsDiagnosis`
--- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `AlekseevStanislavDB`.`PatientsDiagnosis` (
   `Patients_idPatients` INT REFERENCES `AlekseevStanislavDB`.`Patients` (`idPatients`)
     ON DELETE NO ACTION

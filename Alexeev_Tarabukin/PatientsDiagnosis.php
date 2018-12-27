@@ -5,7 +5,7 @@
  </head>
  <body>
 	<?php
-	printf('<P>Hello world! Those our patients diagnosis:</P>');
+	printf('<P>Связь пациент-диагноз(чтобы потом использовать в карте пациента):</P>');
 	include('config.php');	
 	$link = mysqli_connect($server, $user, $password, $database)
 	    or die('Error: Unable to connect: ' . mysqli_connect_error());
@@ -15,7 +15,7 @@
 	$SQLresult = mysqli_query($link,$SQLquery);
 	while ($result = mysqli_fetch_array($SQLresult,MYSQLI_NUM))
 	{
-		printf('<P>Диагнозы пациентов:  пациент %d -  диагноз %d </P>',$result[0],$result[1]);
+		printf('<P>пациент %d -  диагноз %d </P>',$result[0],$result[1]);
 	}
 	mysqli_free_result($SQLresult);
 	mysqli_close($link);
