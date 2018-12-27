@@ -92,14 +92,14 @@ CREATE TABLE IF NOT EXISTS `AlekseevStanislavDB`.`sessions` (
     ON UPDATE NO ACTION,
   `timeStart` TIME NULL DEFAULT NULL,
   `timeFinish` TIME NULL DEFAULT NULL,
-  `lechenie` VARCHAR(45) NULL DEFAULT NULL,
-  PRIMARY KEY (`idsessions`),
   `Patients_idPatients` INT REFERENCES `AlekseevStanislavDB`.`Patients` (`idPatients`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   `diagnosis_iddiagnosis` INT REFERENCES `AlekseevStanislavDB`.`diagnosis` (`iddiagnosis`)
     ON DELETE NO ACTION
-    ON UPDATE NO ACTION);
+    ON UPDATE NO ACTION,
+  `lechenie` VARCHAR(45) NULL DEFAULT NULL,
+    PRIMARY KEY (`idsessions`));
 
 CREATE TABLE IF NOT EXISTS `AlekseevStanislavDB`.`PatientsDiagnosis` (
   `Patients_idPatients` INT REFERENCES `AlekseevStanislavDB`.`Patients` (`idPatients`)

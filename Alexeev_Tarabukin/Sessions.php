@@ -5,7 +5,7 @@
  </head>
  <body>
 	<?php
-	printf('<P>Those our sessions:</P>');
+	printf('<P>ТУТ БУДУТ ХРАНИТЬСЯ ВСЕ ВСЕ СЕАНСЫ, допустим если пациент посетит трех врачей за день, то тут будут все его 3 сеанса по отдельности:</P>');
 	include('config.php');	
 	$link = mysqli_connect($server, $user, $password, $database)
 	    or die('Error: Unable to connect: ' . mysqli_connect_error());
@@ -15,7 +15,7 @@
 	$SQLresult = mysqli_query($link,$SQLquery);
 	while ($result = mysqli_fetch_array($SQLresult,MYSQLI_NUM))
 	{
-		printf('<P>Сеанс %d у специалиста(%d) c %s до %s пациента(%d) с диагнозом %d  Назначено лечение: %s </P>',$result[0],$result[1],$result[2],$result[3],$result[5],$result[6],$result[4]);
+		printf('<P>Сеанс %d у специалиста(%d) c %s до %s пациента(%d) с диагнозом %d  Назначено лечение: %s </P>',$result[0],$result[1],$result[2],$result[3],$result[4],$result[5],$result[6]);
 	}
 	mysqli_free_result($SQLresult);
 	mysqli_close($link);
