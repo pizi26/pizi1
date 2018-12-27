@@ -19,7 +19,7 @@ body {
      margin: auto auto;
      text-align: center;
      width: 80%;
-     height: 1000px;
+     height: 10000px;
 }
  
 #navigation {
@@ -28,7 +28,7 @@ body {
      font-size: 13pt;
      float: left;
      width: 20%;
-     height: 1000px;
+     height: 10000px;
 }
  
 #content {
