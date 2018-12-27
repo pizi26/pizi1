@@ -12,7 +12,7 @@
 	echo '<P>Succesfully connected!</P>';
 	
 	'''$SQLquery = 'SELECT * FROM sessions';'''
-	$SQLquery = 'SELECT sessions.idsessions, (select PassportSP from Specialists inner join sessions on sessions.Specialists_idSpecialists = Specialists.idSpecialist)';
+	$SQLquery = 'SELECT sessions.idsessions, (select PassportSP from Specialists inner join sessions on sessions.Specialists_idSpecialists = Specialists.idSpecialist), sessions.timeStart, sessions.timeFinish, sessions.Patients_idPatients, sessions.diagnosis_iddiagnosis, sessions.lechenie';
 	$SQLresult = mysqli_query($link,$SQLquery);
 	while ($result = mysqli_fetch_array($SQLresult,MYSQLI_NUM))
 	{
