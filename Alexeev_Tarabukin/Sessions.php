@@ -11,7 +11,8 @@
 	    or die('Error: Unable to connect: ' . mysqli_connect_error());
 	echo '<P>Succesfully connected!</P>';
 	
-	$SQLquery = 'SELECT * FROM sessions';
+	'''$SQLquery = 'SELECT * FROM sessions';'''
+	$SQLquery = 'SELECT sessions.idsessions, (select PassportSP from Specialists inner join sessions on sessions.Specialists_idSpecialists = Specialists.idSpecialist)';
 	$SQLresult = mysqli_query($link,$SQLquery);
 	while ($result = mysqli_fetch_array($SQLresult,MYSQLI_NUM))
 	{
