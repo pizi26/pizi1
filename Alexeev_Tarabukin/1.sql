@@ -22,19 +22,19 @@ USE `AlekseevStanislavDB` ;
 
 CREATE TABLE IF NOT EXISTS `AlekseevStanislavDB`.`Workers` (
   `Passport` INT NOT NULL,
-  `First Name` VARCHAR(45) NULL DEFAULT NULL,
-  `Last Name` VARCHAR(45) NULL DEFAULT NULL,
-  `Fathers Name` VARCHAR(45) NULL DEFAULT NULL,
-  `Science degree` VARCHAR(45) NULL DEFAULT NULL,
+  `First_Name` VARCHAR(45) NULL DEFAULT NULL,
+  `Last_Name` VARCHAR(45) NULL DEFAULT NULL,
+  `Fathers_Name` VARCHAR(45) NULL DEFAULT NULL,
+  `Science_degree` VARCHAR(45) NULL DEFAULT NULL,
   PRIMARY KEY (`Passport`));
 
 CREATE TABLE IF NOT EXISTS `AlekseevStanislavDB`.`Patients` (
   `idPatients` INT NOT NULL,
-  `First Name` VARCHAR(45) NULL DEFAULT NULL,
-  `Last Name` VARCHAR(45) NULL DEFAULT NULL,
-  `Fathers Name` VARCHAR(45) NULL DEFAULT NULL,
-  `Passport Series` INT NULL DEFAULT NULL,
-  `Passport Number` INT NULL DEFAULT NULL,
+  `First_Name` VARCHAR(45) NULL DEFAULT NULL,
+  `Last_Name` VARCHAR(45) NULL DEFAULT NULL,
+  `Fathers_Name` VARCHAR(45) NULL DEFAULT NULL,
+  `Passport_Series` INT NULL DEFAULT NULL,
+  `Passport_Number` INT NULL DEFAULT NULL,
   `Adress` VARCHAR(45) NULL DEFAULT NULL,
   PRIMARY KEY (`idPatients`));
 
@@ -67,13 +67,13 @@ CREATE TABLE IF NOT EXISTS `AlekseevStanislavDB`.`PatientsCard` (
   `idPatientsSP` int REFERENCES `AlekseevStanislavDB`.`Patients` (`idPatients`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
-  `First NameSP` VARCHAR(45) REFERENCES `AlekseevStanislavDB`.`Patients` (`First Name`)
+  `First_NameSP` VARCHAR(45) REFERENCES `AlekseevStanislavDB`.`Patients` (`First Name`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
-  `Last NameSP` VARCHAR(45) REFERENCES `AlekseevStanislavDB`.`Patients` (`Last Name`)
+  `Last_NameSP` VARCHAR(45) REFERENCES `AlekseevStanislavDB`.`Patients` (`Last Name`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
-  `Fathers NameSP` VARCHAR(45) REFERENCES `AlekseevStanislavDB`.`Patients` (`Fathers Name`)
+  `Fathers_NameSP` VARCHAR(45) REFERENCES `AlekseevStanislavDB`.`Patients` (`Fathers Name`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
    `idsessionsSP` int REFERENCES `AlekseevStanislavDB`.`sessions` (`idsessions`)
