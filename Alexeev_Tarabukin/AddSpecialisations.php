@@ -3,10 +3,10 @@ include('config.php');
 $link = mysqli_connect($server, $user, $password, $database)
 	or die('Error: Unable to connect: ' . mysqli_connect_error());
 
-$spName = mysqli_real_escape_string($link, $_POST['spName']);
+$SpName = mysqli_real_escape_string($link, $_POST['SpName']);
 echo $spName;
 
-$SQLquery = "INSERT INTO Specialisations VALUES ((SELECT IFNULL(max(idSpecializations)+1,1) from (Select idSpecializations from Specialisations) as idSpecializations), '$spName')";
+$SQLquery = "INSERT INTO Specialisations VALUES ((SELECT IFNULL(max(idSpecializations)+1,1) from (Select idSpecializations from Specialisations) as idSpecializations), '$SpName')";
 echo '<BR> SQL query: ';
 echo $SQLquery;
 
