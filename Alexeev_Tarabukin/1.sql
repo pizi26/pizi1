@@ -67,13 +67,13 @@ CREATE TABLE IF NOT EXISTS `AlekseevStanislavDB`.`PatientsCard` (
   `idPatientsSP` int REFERENCES `AlekseevStanislavDB`.`Patients` (`idPatients`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
-  `First_NameSP` VARCHAR(45) REFERENCES `AlekseevStanislavDB`.`Patients` (`First Name`)
+  `First_NameSP` VARCHAR(45) REFERENCES `AlekseevStanislavDB`.`Patients` (`First_Name`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
-  `Last_NameSP` VARCHAR(45) REFERENCES `AlekseevStanislavDB`.`Patients` (`Last Name`)
+  `Last_NameSP` VARCHAR(45) REFERENCES `AlekseevStanislavDB`.`Patients` (`Last_Name`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
-  `Fathers_NameSP` VARCHAR(45) REFERENCES `AlekseevStanislavDB`.`Patients` (`Fathers Name`)
+  `Fathers_NameSP` VARCHAR(45) REFERENCES `AlekseevStanislavDB`.`Patients` (`Fathers_Name`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
    `idsessionsSP` int REFERENCES `AlekseevStanislavDB`.`sessions` (`idsessions`)
