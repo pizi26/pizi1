@@ -11,7 +11,7 @@ echo '<BR> SQL query: ';
 echo $SQLquery;
 
 if (mysqli_query($link, $SQLquery)) {
-    echo "<BR>New record created successfully";
+    echo "<BR>Можно реализовать потом какой нибуль простой виджетик, вывод: Диагноз добавлен";
 } else {
     echo "<BR>Error: " . $sql . "<br>" . mysqli_error($link);
 }
