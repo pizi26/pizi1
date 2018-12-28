@@ -12,14 +12,14 @@
 	</div>
 <div id="container">
 <div id="navigation">
-	<a href="Specialisations.php"> <P>Specialisations</P> </a>
-			  <a href="Specialists.php"> <P>Specialists</P> </a>
 			  <a href="Patients.php"> <P>Our Patients</P> </a>
-			  <a href="Workers.php"> <P>Our workers</P> </a>
+			  <a href="Workers.php"> <P>Our Workers</P> </a>
+			  <a href="ConsultingRooms.php"> <P>Our Consulting Rooms</P> </a>
+			  <a href="Specialists.php"> <P>Specialists</P> </a>
 			  <a href="Diagnosis.php"> <P>Diagnosis lib</P> </a>
-			  <a href="ConsultingRooms.php"> <P>Consulting Rooms</P> </a>
+			  <a href="Specialisations.php"> <P>Specialisations lib</P> </a>
 			  <a href="PatientsDiagnosis.php"> <P>Our patients diagnosis</P> </a>
-			  <a href="Sessions.php"> <P>Sessions</P> </a>
+			  <a href="Sessions.php"> <P>All Sessions</P> </a>
 </div>
 		<TR>
 			<TD>
@@ -95,6 +95,46 @@
           		  	<br><br>
           		  	<input type="submit" value="AddSpecialisations" id="button5">
       			  </form>
+			</TD>
+		</TR>
+		<br><br><br>
+		<TR>
+			<TD>
+				<?php
+include('config.php');	
+$link = mysqli_connect($server, $user, $password, $database)
+	or die('Error: Unable to connect: ' . mysqli_connect_error());
+mysql_select_db("L",$link);
+$Passport=$_GET['Passport']; 
+  
+$res =  mysql_query("SELECT Passport FROM Workers",$link); 
+echo" 
+<form action=AddSessions.php?Passport=$Passport’ method=’get’> 
+<select name=’Passport’> 
+    <option value=’0?>Выбирете осведомленность</option>"; 
+while($row = mysql_fetch_assoc($res)){ 
+    ?> 
+    <option value="<?=$row['id']?>"><?=$row['Passport']?></option> 
+    <? 
+}?>
+			  <P>Add Sessions:</P>
+			  <?php
+			  include('config.php');	
+				$link = mysqli_connect($server, $user, $password, $database)
+				or die('Error: Unable to connect: ' . mysqli_connect_error());
+				mysql_select_db("L",$link);
+				$Passport=$_GET['Passport']; 
+  
+				$res =  mysql_query("SELECT Passport FROM Workers",$link); 
+				echo" 
+				<form action=AddSessions.php?Passport=$Passport’ method=’get’> 
+				<select name=’Passport’> 
+   				 <option value=’0?>Выбирете осведомленность</option>"; 
+				while($row = mysql_fetch_assoc($res)){ 
+    			?> 
+   				 <option value="<?=$row['id']?>"><?=$row['Passport']?></option> 
+   				 <? 
+				}?>
 			</TD>
 		</TR>
 	</div>
