@@ -9,7 +9,6 @@
 	include('config.php');	
 	$link = mysqli_connect($server, $user, $password, $database)
 	    or die('Error: Unable to connect: ' . mysqli_connect_error());
-	echo '<P>Succesfully connected!</P>';
 	
 	$SQLquery = 'SELECT * FROM diagnosis';
 	$SQLresult = mysqli_query($link,$SQLquery);

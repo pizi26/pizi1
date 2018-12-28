@@ -9,7 +9,6 @@
 	include('config.php');	
 	$link = mysqli_connect($server, $user, $password, $database)
 	    or die('Error: Unable to connect: ' . mysqli_connect_error());
-	echo '<P>Succesfully connected!</P>';
 	
 	$SQLquery = 'SELECT sessions.idsessions, Workers.First_Name, Workers.Last_Name, Workers.Fathers_Name, sessions.timeStart, sessions.timeFinish, Patients.First_Name, Patients.Last_Name, Patients.Fathers_Name, diagnosis.nameDia, sessions.lechenie from sessions inner join Specialists on Specialists.idSpecialist=sessions.Specialists_idSpecialists inner join Workers on Workers.Passport=Specialists.PassportSP inner join Patients on Patients.idPatients=sessions.Specialists_idSpecialists inner join diagnosis on diagnosis.iddiagnosis=sessions.diagnosis_iddiagnosis';
 	$SQLresult = mysqli_query($link,$SQLquery);
