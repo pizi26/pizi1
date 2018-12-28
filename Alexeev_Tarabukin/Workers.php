@@ -14,7 +14,7 @@
 	$SQLresult = mysqli_query($link,$SQLquery);
 	while ($result = mysqli_fetch_array($SQLresult,MYSQLI_NUM))
 	{
-		printf('<P>Работник %s %s %s: c паспортом %d имеет стаж работы - %d </P>',$result[1],$result[2],$result[3],$result[0],$result[4]);
+		printf('<P>Работник %s %s %s: c паспортом %d имеет научную степень - %d </P>',$result[1],$result[2],$result[3],$result[0],$result[4]);
 	}
 	mysqli_free_result($SQLresult);
 	mysqli_close($link);
