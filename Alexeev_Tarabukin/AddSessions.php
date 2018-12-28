@@ -12,7 +12,7 @@ $lechenie = mysqli_real_escape_string($link, $_POST['lechenie']);
 $sledSpec = mysqli_real_escape_string($link, $_POST['sledSpec']);
 
 
-$SQLquery = "INSERT INTO sessions VALUES ((SELECT IFNULL(max(idsessions)+1,1) from (Select idsessions from sessions) as idsessions),'$specId', '$timeStart','$timeFinish', '$pathId','$iddiagnosis','$lechenie','$sledSpec')";
+$SQLquery = "INSERT INTO sessions VALUES ((SELECT IFNULL(max(idsessions)+1,1) from (Select idsessions from sessions) as idsessions),'$specId', '$timeStart','$timeFinish', '$pathId','$iddiagnosis','$lechenie','$sledSpec')",
 $SQLquery = "INSERT INTO PatientsDiagnosis VALUES ('$pathId','$iddiagnosis')";
 
 if (mysqli_query($link, $SQLquery)) {
