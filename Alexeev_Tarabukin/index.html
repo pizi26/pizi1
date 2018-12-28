@@ -5,10 +5,10 @@
 </head>
 <body>
 	<div id="header">
-	<h5 align="center"> Welcome to the website our hospital! Opening Hours: Monday to Saturday 8am to 9pm</h5>
+	<h5 align="center"> Welcome to the website our hospital! Opening Hours: Monday to Saturday 9am to 8pm</h5>
 	</div>
 	<div id="content">
-	<h1 align="center"> Project: Hospital by Stas Alexeev and Tarabukin Ivan </h1>
+	<h1 align="center"> Project: Hospital by Stas Alexeev and Ivan Tarabukin </h1>
 	</div>
 <div id="container">
 <div id="navigation">
@@ -22,6 +22,9 @@
 </div>
 		<TR>
 			<TD>
+				<p> Все эти загатовки заполняют таблицы нашей БазыДанных~ </p>
+				<p> Регистраторша в регистрационной регистрирует пациентов </p>
+				<br><br>
 			  <P>Add Patients:</P>
 			  <form action="AddPatients.php" method="post">
 				First Name <input type="text" name="FirstName">
@@ -43,6 +46,8 @@
 		<br><br><br>
 		<TR>
 			<TD>
+				<p> Лучше какому нибудь админу предоставить возможность добавлять работников, будь то уборщики, врачи, охранники, в свою базу, выставлять информацию про работников и пациентов(пусть это больница решает) дело вебдизайнеров</p>
+				<br><br>
 			  <P>Add Workers:</P>
 			  <form action="AddWorkers.php" method="post">
 				Passport <input type="text" name="Passport">
@@ -62,6 +67,8 @@
 		<br><br><br>
 		<TR>
 			<TD>
+				<p> Я думаю, что эту функцию можно предоставить всем, чтобы библиотека была обширней, сюда нужно добавлять все существующие диагнозы в мире</p>
+				<br><br>
 			  <P>Add Diagnosis:</P>
 			  <form action="AddDiagnosis.php" method="post">
 				New Diagnosis <input type="text" name="nameDia">
@@ -73,6 +80,8 @@
 		<br><br><br>
 		<TR>
 			<TD>
+				<p> Пока думаю это стоит делать только админу, ну специальностей в больнице меньше 50 уж точно </p>
+				<br><br>
 			  <P>Add Specialisations:</P>
 			  <form action="AddSpecialisations.php" method="post">
 				New Specialisations <input type="text" name="SpName">
@@ -84,6 +93,8 @@
 		<br><br><br>
 		<TR>
 			<TD>
+				<p> Тут расписание кабинетов, неважно кто заполняет </p>
+				<br><br>
 			  <P>Add ConsultingRooms:</P>
 			  <form action="AddConsultingRooms.php" method="post">
 				New Cabinet <input type="text" name="NUMcab">
@@ -99,23 +110,27 @@
 		<br><br><br>
 		<TR>
 			<TD>
+				<p> А вот про сеансы интересней, тут наверное предоставить каждому врачу или ассистенту по компьютеру, в загатовке по дефолту будет стоять id этого врача, можно реализовать дефолтную вставку времени начала и конца сеанса по нажатии кнопки начала и по отправке о конце сеанса. Врачу остается выбрать пациента по поиску или по выпадающему списку всех заригестрированных пациентов, выбрать диагнох из нашей обширной библиотеки, а про леечеие по его усмотрению наверно, или же можно тоже привязать к диагнозам загатовки</p>
+				<br><br>
 			  <P>Add Sessions:</P>
 			  <form action="AddSessions.php" method="post">
-				Пока номер специалиста id, не успел реализовать выпадающий список всех специалистов <input type="text" name="specId">
+				Пока специалист id(Example:1), не успел реализовать выпадающий список всех специалистов <input type="text" name="specId">
           		  	<br><br>
-          		Пока номер пациента по id, не успел реализовать выпадающий список всех пациентов <input type="text" name="pathId">
+          		Пока пациент по id(1), не успел реализовать выпадающий список всех пациентов <input type="text" name="pathId">
           		  	<br><br>
           		Начало сеанса['10:00'] <input type="text" name="timeStart">
           		  	<br><br>
           		Конец сеанса ['10:05'] <input type="text" name="timeFinish">
           		  	<br><br>
-          		Пока номер диагноза по id, не успел реализовать выпадающий список всех диагнозов <input type="text" name="iddiagnosis">
+          		Пока диагноз по id(1), не успел реализовать выпадающий список всех диагнозов <input type="text" name="iddiagnosis">
           		  	<br><br>
           		Назначено лечение <input type="text" name="lechenie">
           		  	<br><br>
-          		Пока номер следующего врача(Специальности, не специалиаста)) по id, не успел реализовать выпадающий список всех специальностей <input type="text" name="sledSpec">
+          		Пока id следующего врача(Специальности, не специалиаста), не успел реализовать выпадающий список всех специальностей <input type="text" name="sledSpec">
           		  	<br><br>
           		  	<input type="submit" value="AddSessions" id="button6">
+          		  	<br><br>
+          		  	<p></p>>
       			  </form>
 			</TD>
 		</TR>

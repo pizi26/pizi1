@@ -1,6 +1,6 @@
 <html>
  <head>
-  <title>Специальности нашей больницы</title>
+  <title>Специальности</title>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
  </head>
  <body>
