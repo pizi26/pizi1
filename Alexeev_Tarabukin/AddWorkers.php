@@ -8,18 +8,11 @@ $FirstName = mysqli_real_escape_string($link, $_POST['FirstName']);
 $LastName = mysqli_real_escape_string($link, $_POST['LastName']);
 $FathersName = mysqli_real_escape_string($link, $_POST['FathersName']);
 $ScienceDegree = mysqli_real_escape_string($link, $_POST['ScienceDegree']);
-echo $Passport;
-echo $FirstName;
-echo $LastName;
-echo $FathersName;
-echo $ScienceDegree;
 
 $SQLquery = "INSERT INTO Workers VALUES ('$Passport', '$FirstName','$LastName', '$FathersName','$ScienceDegree')";
-echo '<BR> SQL query: ';
-echo $SQLquery;
 
 if (mysqli_query($link, $SQLquery)) {
-    echo "<BR>Можно реализовать потом какой нибуль простой виджетик, вывод: Работник добавлен";
+    echo "<BR>Можно реализовать потом какой нибудь простой виджетик, вывод: Работник добавлен";
 } else {
     echo "<BR>Error: " . $sql . "<br>" . mysqli_error($link);
 }
