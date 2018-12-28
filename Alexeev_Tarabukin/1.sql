@@ -99,6 +99,9 @@ CREATE TABLE IF NOT EXISTS `AlekseevStanislavDB`.`sessions` (
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   `lechenie` VARCHAR(45) NULL DEFAULT NULL,
+  `sledSpec` INT REFERENCES `AlekseevStanislavDB`.`Specialisations` (`idSpecializations`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
     PRIMARY KEY (`idsessions`));
 
 CREATE TABLE IF NOT EXISTS `AlekseevStanislavDB`.`PatientsDiagnosis` (
