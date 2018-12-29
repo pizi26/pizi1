@@ -104,14 +104,6 @@ CREATE TABLE IF NOT EXISTS `AlekseevStanislavDB`.`sessions` (
     ON UPDATE NO ACTION,
     PRIMARY KEY (`idsessions`));
 
-CREATE TABLE IF NOT EXISTS `AlekseevStanislavDB`.`PatientsDiagnosis` (
-  `Patients_idPatients` INT REFERENCES `AlekseevStanislavDB`.`Patients` (`idPatients`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
-  `diagnosis_iddiagnosis` INT REFERENCES `AlekseevStanislavDB`.`diagnosis` (`iddiagnosis`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION);
-
 
 SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
