@@ -5,24 +5,25 @@
 </head>
 <body>
 	<div id="header">
-	<h5 align="center"> Welcome to the website our hospital! Opening Hours: Monday to Saturday 8am to 9pm</h5>
+	<h5 align="center"> Welcome to the website our hospital! Opening Hours: Monday to Saturday 9am to 8pm</h5>
 	</div>
 	<div id="content">
-	<h1 align="center"> Project: Hospital by Stas Alexeev and Tarabukin Ivan </h1>
+	<h1 align="center"> Project: Hospital by Stas Alexeev and Ivan Tarabukin </h1>
 	</div>
 <div id="container">
 <div id="navigation">
-	<a href="Specialisations.php"> <P>Specialisations</P> </a>
-			  <a href="Specialists.php"> <P>Specialists</P> </a>
 			  <a href="Patients.php"> <P>Our Patients</P> </a>
-			  <a href="Workers.php"> <P>Our workers</P> </a>
+			  <a href="Workers.php"> <P>Our Workers</P> </a>
+			  <a href="ConsultingRooms.php"> <P>Our Consulting Rooms</P> </a>
+			  <a href="Specialists.php"> <P>Specialists</P> </a>
 			  <a href="Diagnosis.php"> <P>Diagnosis lib</P> </a>
-			  <a href="ConsultingRooms.php"> <P>Consulting Rooms</P> </a>
-			  <a href="PatientsDiagnosis.php"> <P>Our patients diagnosis</P> </a>
-			  <a href="Sessions.php"> <P>Sessions</P> </a>
+			  <a href="Specialisations.php"> <P>Specialisations lib</P> </a>
+			  <a href="Sessions.php"> <P>All Sessions</P> </a>
 </div>
 		<TR>
 			<TD>
+				<p> Все эти загатовки заполняют таблицы нашей БазыДанных~ </p>
+				<p> Регистраторша в регистрационной регистрирует пациентов </p>
 			  <P>Add Patients:</P>
 			  <form action="AddPatients.php" method="post">
 				First Name <input type="text" name="FirstName">
@@ -44,6 +45,7 @@
 		<br><br><br>
 		<TR>
 			<TD>
+				<p> Лучше какому нибудь админу предоставить возможность добавлять работников, будь то уборщики, врачи, охранники, в свою базу, выставлять информацию про работников и пациентов(пусть это больница решает) это дело вебдизайнеров</p>
 			  <P>Add Workers:</P>
 			  <form action="AddWorkers.php" method="post">
 				Passport <input type="text" name="Passport">
@@ -63,6 +65,7 @@
 		<br><br><br>
 		<TR>
 			<TD>
+				<p> Я думаю, что эту функцию можно предоставить всем, чтобы библиотека была обширней, сюда нужно добавлять все существующие диагнозы в мире</p>
 			  <P>Add Diagnosis:</P>
 			  <form action="AddDiagnosis.php" method="post">
 				New Diagnosis <input type="text" name="nameDia">
@@ -74,9 +77,11 @@
 		<br><br><br>
 		<TR>
 			<TD>
+				<p> Пока думаю это стоит делать только админу, ну специальностей в больнице меньше 50 уж точно </p>
+				<br><br>
 			  <P>Add Specialisations:</P>
 			  <form action="AddSpecialisations.php" method="post">
-				New Diagnosis <input type="text" name="SpName">
+				New Specialisations <input type="text" name="SpName">
           		  	<br><br>
           		  	<input type="submit" value="AddSpecialisations" id="button4">
       			  </form>
@@ -85,6 +90,8 @@
 		<br><br><br>
 		<TR>
 			<TD>
+				<p> Тут расписание кабинетов, неважно кто заполняет </p>
+				<br><br>
 			  <P>Add ConsultingRooms:</P>
 			  <form action="AddConsultingRooms.php" method="post">
 				New Cabinet <input type="text" name="NUMcab">
@@ -95,6 +102,15 @@
           		  	<br><br>
           		  	<input type="submit" value="AddSpecialisations" id="button5">
       			  </form>
+			</TD>
+		</TR>
+		<br><br><br>
+		<TR>
+			<TD>
+				<p> А вот про сеансы интересней, тут наверное предоставить каждому врачу или ассистенту по компьютеру, в загатовке по дефолту будет стоять id этого врача, можно реализовать дефолтную вставку времени начала и конца сеанса по нажатии кнопки начала и по отправке о конце сеанса. Врачу остается выбрать пациента по поиску или по выпадающему списку всех заригестрированных пациентов, выбрать диагноз из нашей обширной библиотеки, а про лечение по его усмотрению наверно, или же можно тоже привязать к диагнозам загатовки</p>
+				<br><br>
+				<a href="AddSessionsHTML.php"> <P>Жмякайте сюда AddSessions</P> </a>
+				<p>Остается карта пациента, она задумана так: делается запрос на idпациента, потом по этому этому id cобирает все диагнозы за сегодняшнюю дату у пациента в таблице Sessions. Потом уже можно добавлять к карте пациента лист диагнозов за какую сегодняшнюю дату, т.е в следующий раз когда он придет добавит все его диагнозы на след дату. Карту пациента не успели сделать.</p>
 			</TD>
 		</TR>
 	</div>

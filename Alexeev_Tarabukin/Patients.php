@@ -5,11 +5,10 @@
  </head>
  <body>
 	<?php
-	printf('<P>Тут будет инфомация о наших пациентах, вводимые при их регистрации:</P>');
+	printf('<P>Тут будет инфомация о наших пациентах, вводимые при их регистрации: </P>');
 	include('config.php');	
 	$link = mysqli_connect($server, $user, $password, $database)
 	    or die('Error: Unable to connect: ' . mysqli_connect_error());
-	echo '<P>Succesfully connected!</P>';
 	
 	$SQLquery = 'SELECT * FROM Patients';
 	$SQLresult = mysqli_query($link,$SQLquery);

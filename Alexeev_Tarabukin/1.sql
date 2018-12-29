@@ -67,13 +67,13 @@ CREATE TABLE IF NOT EXISTS `AlekseevStanislavDB`.`PatientsCard` (
   `idPatientsSP` int REFERENCES `AlekseevStanislavDB`.`Patients` (`idPatients`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
-  `First_NameSP` VARCHAR(45) REFERENCES `AlekseevStanislavDB`.`Patients` (`First Name`)
+  `First_NameSP` VARCHAR(45) REFERENCES `AlekseevStanislavDB`.`Patients` (`First_Name`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
-  `Last_NameSP` VARCHAR(45) REFERENCES `AlekseevStanislavDB`.`Patients` (`Last Name`)
+  `Last_NameSP` VARCHAR(45) REFERENCES `AlekseevStanislavDB`.`Patients` (`Last_Name`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
-  `Fathers_NameSP` VARCHAR(45) REFERENCES `AlekseevStanislavDB`.`Patients` (`Fathers Name`)
+  `Fathers_NameSP` VARCHAR(45) REFERENCES `AlekseevStanislavDB`.`Patients` (`Fathers_Name`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
    `idsessionsSP` int REFERENCES `AlekseevStanislavDB`.`sessions` (`idsessions`)
@@ -103,14 +103,6 @@ CREATE TABLE IF NOT EXISTS `AlekseevStanislavDB`.`sessions` (
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
     PRIMARY KEY (`idsessions`));
-
-CREATE TABLE IF NOT EXISTS `AlekseevStanislavDB`.`PatientsDiagnosis` (
-  `Patients_idPatients` INT REFERENCES `AlekseevStanislavDB`.`Patients` (`idPatients`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
-  `diagnosis_iddiagnosis` INT REFERENCES `AlekseevStanislavDB`.`diagnosis` (`iddiagnosis`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION);
 
 
 SET SQL_MODE=@OLD_SQL_MODE;

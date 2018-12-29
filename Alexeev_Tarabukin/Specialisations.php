@@ -1,15 +1,14 @@
 <html>
  <head>
-  <title>Специальности нашей больницы</title>
+  <title>Специальности</title>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
  </head>
  <body>
 	<?php
-	printf('<P>Тут хранится информация о специальностях, можно сказать список вакансий для сотрудников больницы: </P>');
+	printf('<P>Тут хранится информация о специальностях, можно сказать список вакансий для сотрудников больницы:(в идеале этой таблицы не будет на сайте, только в базе данных, но в данном этапе разработки решили выставить на показ все таблицы бд) </P>');
 	include('config.php');	
 	$link = mysqli_connect($server, $user, $password, $database)
 	    or die('Error: Unable to connect: ' . mysqli_connect_error());
-	echo '<P>Succesfully connected!</P>';
 	
 	$SQLquery = 'SELECT * FROM Specialisations';
 	$SQLresult = mysqli_query($link,$SQLquery);

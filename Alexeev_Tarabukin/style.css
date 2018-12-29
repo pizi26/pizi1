@@ -13,7 +13,7 @@ body {
      height: 18px;
 }
  #container {
-     background: #FFD700;
+     background: #696969;
      color: #FFFAFA;
      font-size: 13pt;
      margin: auto auto;
@@ -61,6 +61,11 @@ body {
 }
 
 #button5 {
+    background: #D2691E;
+    color: #FFFFFF;
+}
+
+#button6 {
     background: #D2691E;
     color: #FFFFFF;
 }

@@ -1,6 +1,6 @@
 <html>
  <head>
-  <title>Специалисты нашей больницы</title>
+  <title>Расписание врачей</title>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
  </head>
  <body>
