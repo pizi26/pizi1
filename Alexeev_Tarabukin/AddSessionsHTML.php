@@ -10,7 +10,7 @@
 			<TD>
 			  <P>Допустим это рабочий комп врача:</P>
       			<form action="AddSessions.php" method="post">
-				Выберите специалиста <select name="specId">
+				Выберите пациента <select name="pathId">
 					<?php 
 		                        include('config.php');	
 					$link = mysqli_connect($server, $user, $password, $database)					
@@ -27,7 +27,7 @@
 					?>
 				</select>
           		  	<br><br>
-          		Выберите пациента <select name="pathId">
+          		Выберите врача <select name="specId">
 					<?php 
 		                        include('config.php');	
 					$link = mysqli_connect($server, $user, $password, $database)					
